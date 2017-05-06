@@ -1,0 +1,132 @@
+<!-- version: 1.0 - by BlocksBerg -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title> :P </title>
+
+	<!-- Just CSS, Not Important -->
+	<style type="text/css">
+		
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			color: #fff;
+			background-color: #e8d8bf;
+			font-family: arial;
+			margin: 0;
+			padding-bottom: 30px;
+		}
+
+		h3 {
+			margin: 0;
+			margin-bottom: 20px;
+		}
+
+		.box {
+			width: 90%;
+			max-width: 600px;
+			background-color: #abc9bd;
+			text-align: center;
+			margin: 0 auto;
+			margin-top: 20px;
+			padding: 20px;
+		}
+
+		.input {
+			width: 100%;
+			border: 0;
+			padding: 10px;
+			margin-bottom: 5px;
+		}
+
+		.button {
+			color: #fff;
+			background-color: #e9a29e;
+			font-weight: bold;
+			border: 0;
+			width: 120px;
+			padding: 10px;
+			cursor: pointer;
+		}
+
+		.button:hover {
+			background-color: #d7a29e;
+		}
+
+		.list-message {
+			color: #fff;
+			background-color: #b7d4c9;
+			line-height: 1.5;
+			text-align: left;
+			padding: 10px;
+			margin-bottom: 5px;
+		}
+
+		.list-message a {
+			color: #777;
+			font-size: 14px;
+			font-weight: bold;
+			text-decoration: none;
+			margin-right: 5px;
+		}
+
+		.list-message a:hover {
+			color: #e9a29e;
+		}
+
+	</style>
+
+</head>
+<body>
+
+
+	<!-- Box Add Message -->
+	<div class="box one">
+		<h3>Add Message</h3>
+
+		<form action="./add_message" method="post">
+			<input name="name" class="input name" type="text" placeholder="Name">
+			<textarea name="message" class="input message" placeholder="Message"></textarea>
+			<button class="button" type="submit">Add</button>
+		</form>
+
+	</div>
+
+
+	<!-- Box Show All Message -->
+	<div class="box two">
+		<h3>Show All Message</h3>
+
+		<!-- Loop show each message -->
+		{% for data in result %}
+			<div class="list-message">
+				<a href="./delete_message?id={{ data.id }}"> X </a>
+
+				{{ data.name }} : {{ data.text }}
+			</div>
+		{% else %}
+			<div class="list-message">No Message</div>
+		{% endfor %}
+
+	</div>
+
+
+	<!-- Box Show Some User on Dropdown -->
+	<div class="box three">
+		<h3>Show User on Dropdown</h3>
+
+		<select>
+			<!-- Loop show each User -->
+			{% for data in result %}
+				<option>{{ data.name }}</option>
+			{% else %}
+				<option>No User</option>
+			{% endfor %}
+		</select>
+	</div>
+
+
+</body>
+</html>
