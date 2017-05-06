@@ -1,4 +1,4 @@
-# node.js-demo_mysql
+# Node.js - Demo MySQL
 
 *Using MySQL with Node.js*
 
