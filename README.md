@@ -8,10 +8,11 @@
 - Delete Data
 
 ### How to Install
-1. Import [file Database](https://github.com/iamblocksberg/node.js-demo_mysql/blob/master/_File%20Database/awesome_db.sql) to your Database 
-1. cd project
-1. npm install
-  1. npm start
+1. Import [file Database](https://github.com/iamblocksberg/node.js-demo_mysql/blob/master/_File%20Database/awesome_db.sql) to your Database
+1. open CMD / Terminal
+    1. cd project
+    1. npm install
+    1. npm start
 
 
 ![Screenshot](_Screenshot/Screenshot_8.png)
