@@ -14,6 +14,10 @@
 1. npm install
 1. npm start
 
+### Important File
+- routes/index.js
+- views/index.html
+
 
 
 ![Screenshot](_Screenshot/Screenshot_8.png)
